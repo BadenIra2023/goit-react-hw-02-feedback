@@ -26,7 +26,7 @@ export class App extends Component {
 
   render() {
     const btns = Object.keys(this.state);
-    const { good, neutral, bad } = this.state;
+    
     return ( 
 
     <div
@@ -44,7 +44,7 @@ export class App extends Component {
             title={'Please leave feedback'}
             btns={btns}
           clickFeedback={this.onLeaveFeedback} />
-        {this.countTotalFeedback() != 0 ? (
+        {this.countTotalFeedback() !== 0 ? (
         < Statistics
             good={this.state.good}
             neutral={this.state.neutral}
@@ -57,6 +57,4 @@ export class App extends Component {
           )}
       </div>
         )
-     
-};
-};
+     }};
